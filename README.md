@@ -29,3 +29,4 @@ Angular in the end us a JS framework changing your DOM at run time
 Angular component just simply a typescript class
 We add a special decorator to tell angylar this is component
 decorator is a ts feature allow you enhance your class
+
