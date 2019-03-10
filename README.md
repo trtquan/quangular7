@@ -24,3 +24,8 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 
 ### Loaded and started q7-001
+Angular in the end us a JS framework changing your DOM at run time
+### Basic q7-002
+Angular component just simply a typescript class
+We add a special decorator to tell angylar this is component
+decorator is a ts feature allow you enhance your class
