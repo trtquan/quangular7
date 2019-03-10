@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
 })
 
 export class ServerComponent {
-
+  private serverID = 10;
+  serverStatus() {
+    return Math.floor(Math.random() * 10) < 5 ? 'error' : 'success';
+  }
 }
