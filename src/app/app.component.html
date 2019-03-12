@@ -1,22 +1,34 @@
-<ol>
-  <li>Add a Input field which updates a property ('username') via Two-Way-Binding</li>
-  <li>Output the username property via String Interpolation (in a paragraph below the input)</li>
-  <li>Add a button which may only be clicked if the username is NOT an empty string</li>
-  <li>Upon clicking the button, the username should be reset to an empty string</li>
-</ol>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <ol>
+        <li>Add A button which says 'Display Details'</li>
+        <li>Add a paragraph with any content of your choice (e.g. 'Secret Password = tuna')</li>
+        <li>Toggle the displaying of that paragraph with the button created in the first step</li>
+        <li>Log all button clicks in an array and output that array below the secret paragraph (maybe log a timestamp or simply an incrementing number)</li>
+        <li>Starting at the 5th log item, give all future log items a blue background (via ngStyle) and white color (ngClass)</li>
+      </ol>
+    </div>
+  </div>
+</div>
 
-<br>
+<hr>
 
-<label for="user-name"></label>
-<input type="text"
-       [(ngModel)]="userName"
-       name="user-name"
-       class="form-control" 
-/>
-<p [innerText]="userName"
-></p>
-<button [disabled]="!userName"
-        class="btn btn-warning"
-        (click)="onResetUserName()"
-        [innerText]="'reset User'"
-></button>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <button class="btn btn-primary"
+              (click)="onToggle()"
+              [innerText]="'Display Details'">
+      </button>
+      <p *ngIf="isShowDetail">Secret Password = tuna</p>
+      <ng-container *ngFor="let log of logs; let i = index">
+        <div 
+            [innerText]="log"
+            [ngClass]="{'card-text white-text': i > 4}"
+            [ngStyle]="{'background-color': i > 4 ? 'blue' : 'transparent'}">
+      </div>
+      </ng-container>
+    </div>
+  </div>
+</div>
