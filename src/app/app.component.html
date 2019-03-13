@@ -25,8 +25,8 @@
       <ng-container *ngFor="let log of logs; let i = index">
         <div 
             [innerText]="log"
-            [ngClass]="{'card-text white-text': i > 4}"
-            [ngStyle]="{'background-color': i > 4 ? 'blue' : 'transparent'}">
+            [ngClass]="{'card-text white-text': i > 3}"
+            [ngStyle]="{'background-color': i > 3 ? 'blue' : 'transparent'}">
       </div>
       </ng-container>
     </div>
